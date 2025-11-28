@@ -1,0 +1,322 @@
+/* style.css - oddiy va toza dizayn */
+
+/* Reset va umumiy */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+:root{
+  --bg:#f7f8fb; 
+  --accent:#2563eb; 
+  --muted:#6b7280; 
+  --white:#ffffff;
+  --container:1100px;
+}
+body{
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color:#111827;
+  line-height:1.5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('travel_agency.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* xiralik */
+  filter: blur(0px);
+  opacity: 0.7; /* rasmni biroz qoraytiradi 0 - 1 gacha o'zgartirsangiz bo'ladi */
+  z-index: -1; /* hamma narsaning orqasida bo'ladi */
+}
+
+/* container */
+.container{
+  width:90%;
+  max-width:var(--container);
+  margin:0 auto;
+}
+
+/* Navbar */
+.navbar{ 
+  background: var(--white); 
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06); 
+  position:sticky; 
+  top:0; 
+  z-index:10;
+}
+
+.nav-inner{ 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:12px 0; 
+}
+
+.brand{ 
+  font-weight:700; 
+  color:var(--accent); 
+  text-decoration:none; 
+  font-size:1.1rem; 
+}
+
+.nav-list{ 
+  list-style:none; 
+  display:flex; 
+  gap:18px; 
+  align-items:center; 
+}
+
+.nav-list a{ 
+  color: #111827; 
+  text-decoration:none; 
+  padding:8px 10px; 
+  border-radius:6px; 
+}
+
+.nav-list a:hover{ 
+  background: rgba(37,99,235,0.08); 
+  color:var(--accent); 
+}
+
+.nav-toggle{ 
+  display:none; 
+  background:none; 
+  border:0; 
+  font-size:1.2rem; 
+  cursor:pointer; 
+}
+
+/* Hero with background image */
+.hero{
+  min-height: 52vh;
+  margin-left: 100px;
+  margin-right: 100px;
+  display:flex;
+  align-items:center;
+  color:var(--white);
+  padding:48px 0;
+  background-image: url('https://picsum.photos/1400/700'); /* onlayn demo; o'zingiz rasm joylashtirishingiz mumkin */
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute; 
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+}
+
+.hero-inner{ 
+  position:relative; 
+  z-index:2; 
+  text-align:center; 
+}
+
+.hero h1{ 
+  font-size:2rem; 
+  margin-bottom:10px; 
+  text-shadow:0 4px 12px rgba(0,0,0,0.35); 
+}
+
+.lead{ 
+  opacity:0.95; 
+  margin-bottom:16px; 
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  background:var(--accent); 
+  color:var(--white); 
+  padding:10px 16px; 
+  border-radius:8px;
+  text-decoration:none; 
+  border:0; 
+  cursor:pointer;
+}
+
+.btn:hover{ 
+  filter:brightness(0.95); 
+}
+
+/* Content */
+.content{ 
+  padding:40px 0; 
+}
+
+.features{ 
+  display:grid; 
+  grid-template-columns:repeat(3,1fr); 
+  gap:18px; 
+  margin-top:18px; 
+}
+
+.card{ 
+  background:var(--white); 
+  padding:18px; 
+  border-radius:12px; 
+  box-shadow:0 6px 18px rgba(14,20,30,0.04); 
+  background-color: rgb(63, 63, 235); 
+  color: white; 
+}
+
+/* Contact form */
+.contact{ 
+  padding:36px 0 60px; 
+}
+
+.form{ 
+  display:grid; 
+  gap:10px; 
+  max-width:620px; 
+}
+
+.form input, .form textarea{
+  padding:10px; 
+  border-radius:8px; 
+  border:1px solid #e6e9ef; 
+  font-size:0.95rem;
+}
+
+.form label{ 
+  font-size:0.9rem; 
+  color:var(--muted); 
+}
+
+.form-result{ 
+  margin-top:8px; 
+  color:green; 
+  font-weight:600; 
+}
+
+/* ===== Social follow block ===== */
+.follow {
+  padding: 32px 0 48px;
+  text-align: center;
+}
+.follow h2 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+.follow-lead {
+  color: black;
+  margin-bottom: 18px;
+}
+
+.viloyat{
+  text-decoration:none; 
+}
+/* Social icons row */
+.socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* Individual social link */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #111827;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 16px rgba(14,20,30,0.06);
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+  font-weight: 600;
+}
+.social-link svg { flex: 0 0 auto; }
+.social-name { font-size: 0.95rem; }
+
+/* Hover / focus states */
+.social-link:hover,
+.social-link:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(14,20,30,0.12);
+  background: var(--white);
+  color: var(--accent);
+  outline: none;
+}
+
+/* Small screens: show only icons (optional) */
+@media (max-width: 540px) {
+  .social-name { display: none; }
+  .social-link { padding: 10px; border-radius: 50%; width:44px; height:44px; justify-content:center; }
+}
+
+
+/* Footer */
+.site-footer{ 
+    padding:18px 0; 
+    text-align:center; 
+    color:var(--muted); 
+    font-size:0.9rem; 
+    background:transparent; 
+}
+
+.p{
+  color: black;
+}
+
+/* -- Tez override: Aloqa bo'limini majburan ko'rsatish uchun -- */
+.aloqa-section,
+.aloqa-section * {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  max-width: 1100px;    /* bo‘lim maksimal kengligi */
+  margin-left: auto;     /* markazlashtirish uchun */
+  margin-right: auto;    /* markazlashtirish uchun */
+  padding-left: 10px;    /* chapdan ichki masofa */
+  padding-right: 10px;   /* o‘ngdan ichki masofa */
+  box-sizing: border-box; /* padding butun kenglikni oshirmasligi uchun */
+}
+
+/* Aloqa itemlarni aniq ko'rsatish */
+.aloqa-item {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.90)) !important;
+  color: #0b1220 !important;
+  padding: 18px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(11,20,40,0.06) !important;
+}
+
+
+/* Aloqa link range (telefon/email) */
+.aloqa-link {
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+/* Agar hover ishlamasa, hover effektni qisqacha */
+.aloqa-item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 18px 40px rgba(11,20,40,0.08) !important;
+}
+
+
+/* Responsive */
+@media (max-width:900px){
+  .features{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .nav-list{ display:none; position:absolute; right:12px; top:56px; background:var(--white); padding:10px; border-radius:8px; box-shadow:0 8px 20px rgba(0,0,0,0.08); flex-direction:column; }
+  .nav-toggle{ display:inline-block; }
+  .features{ grid-template-columns:1fr; }
+  .hero h1{ font-size:1.5rem; }
+}
