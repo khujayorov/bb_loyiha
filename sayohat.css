@@ -95,8 +95,8 @@ body::before {
 /* Hero with background image */
 .hero{
   min-height: 52vh;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
   display:flex;
   align-items:center;
   color:var(--white);
