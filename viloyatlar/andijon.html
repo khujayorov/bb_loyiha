@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'zbekistan | Andijon</title>
+  <meta charset="UTF-8">
+  <title>O'zbekistan | Andijon</title>
+  <link rel="stylesheet" href="andijon.css">
 </head>
 <body>
+
+<header class="hero">
+  <h1>Andijon viloyati</h1>
+  <p>Go'zal tabiat va unutilmas sayohat</p>
+</header>
+
+<section class="about">
+  <h2>Andijon haqida</h2>
+  <p>
+    Andijon viloyati O'zbekistonning sharqida joylashgan bo'lib,
+    sayyohlar uchun juda qiziqarli hudud hisoblanadi.
+  </p>
+</section>
+
+<section class="register">
+  <h2>Onlayn ro'yxatdan o'tish</h2>
+
+  <form id="registerForm" class="form">
+    <label>Ism familiya</label>
+    <input type="text" id="name" required>
+
+    <label>Telefon raqam</label>
+    <input type="tel" id="phone" placeholder="+998" required>
+
+    <label>Email</label>
+    <input type="email" id="email" required>
+
+    <label>Sayohat sanasi</label>
+    <input type="date" id="date" required>
+
+    <button type="submit">Ro'yxatdan o'tish</button>
+
+    <p id="result" class="result"></p>
+  </form>
+</section>
+
     <a href="../index.html">Bosh sahifa</a>
+<footer>
+  <p>© 2025 Andijon sayohati</p>
+</footer>
+
+<script src="andijon.js"></script>
 </body>
 </html>

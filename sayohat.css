@@ -49,6 +49,10 @@ body::before {
   position:sticky; 
   top:0; 
   z-index:10;
+  max-width: 1200px;
+  margin: 16px auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .nav-inner{ 
