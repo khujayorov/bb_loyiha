@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'zbekistan | Farg'ona</title>
+  <meta charset="UTF-8">
+  <title>O'zbekistan | Farg'ona</title>
+  <link rel="stylesheet" href="fargona.css">
 </head>
 <body>
-    <a href="../index.html">Bosh sahifa</a>
+
+<header class="hero">
+  <h1>Farg'ona viloyati</h1>
+  <p>Go'zal tabiat va unutilmas sayohat</p>
+</header>
+
+<section class="gallery">
+  <h2>Farg'ona manzaralari</h2>
+
+  <div class="gallery-grid">
+    <img src="img/fargona1.jpg" alt="Farg'ona 1">
+    <img src="img/andijon2.jpg" alt="Farg'ona 2">
+    <img src="img/fargona3.jpg" alt="Farg'ona 3">
+    <img src="img/fargona4.jpg" alt="Farg'ona 4">
+    <img src="img/fargona5.jpg" alt="Farg'ona 5">
+    <img src="img/fargona6.jpg" alt="Farg'ona 6">
+    <img src="img/fargona7.jpg" alt="Farg'ona 7">
+    <img src="img/fargona8.jpg" alt="Farg'ona 8">
+    <img src="img/fargona9.jpg" alt="Farg'ona 9">
+    <img src="img/fargona10.jpg" alt="Farg'ona 10">
+    <img src="img/fargona11.jpg" alt="Farg'ona 11">
+    <img src="img/fargona12.jpg" alt="Farg'ona 12">
+  </div>
+</section>
+
+<!-- Modal (rasm kattalashib chiqadi) -->
+<div class="modal" id="imgModal">
+  <span class="close">&times;</span>
+  <img class="modal-img" id="modalImage">
+</div>
+
+<section class="about">
+  <h2>Farg'ona haqida</h2>
+  <p>
+    Farg'ona viloyati O'zbekistonning sharqida joylashgan bo'lib,
+    sayyohlar uchun juda qiziqarli hudud hisoblanadi.
+  </p>
+</section>
+
+<section class="register">
+  <h2>Onlayn ro'yxatdan o'tish</h2>
+
+  <form id="registerForm" class="form">
+    <label>F.I.O</label>
+    <input type="text" id="name" placeholder="f.i.o" required>
+
+    <label>TelefonRaqam</label>
+    <input type="tel" id="phone" placeholder="+998" required>
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="pochta manzili" required>
+
+    <label>Sayohat sanasi</label>
+    <input type="date" id="date" required>
+
+    <button type="submit">Ro'yxatdan o'tish</button>
+
+    <p id="result" class="result"></p>
+  </form>
+</section>
+
+    <!-- <a href="../index.html">Bosh sahifa</a> -->
+
+<footer>
+  <p>© 2025 Farg'ona sayohati</p>
+</footer>
+
+<script src="fargona.js"></script>
 </body>
 </html>
