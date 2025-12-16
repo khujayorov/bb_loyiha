@@ -16,7 +16,7 @@ form.addEventListener("submit", function (e) {
   }
 
   result.style.color = "green";
-  result.textContent = `Rahmat, ${name}! Siz Andijon sayohatiga ro'yxatdan o'tdingiz.`;
+  result.textContent = `Rahmat, ${name}! Siz Buxoro sayohatiga ro'yxatdan o'tdingiz.`;
 
   form.reset();
 });
